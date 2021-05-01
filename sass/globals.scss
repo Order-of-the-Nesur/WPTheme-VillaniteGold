@@ -1,0 +1,50 @@
+﻿@import "variables.scss";
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: $black;
+    color: $white;
+    font-family: $content-font;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $title-font;
+    margin: 1rem 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1.1em;
+}
+
+a {
+    color: $primary;
+    transition: 0.2s;
+
+    &:hover {
+        color: $primary-dark;
+    }
+}

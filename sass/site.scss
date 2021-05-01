@@ -1,0 +1,372 @@
+﻿@import "wp-requirements.scss";
+@import "globals.scss";
+
+#MainNav {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    justify-content: space-between;
+    padding: 1rem 0 0 0;
+    border-bottom: 1px solid $primary;
+    box-shadow: 0px -8px 10px 5px $primary;
+    position: fixed;
+    width: 100%;
+    background: $black-transparent;
+
+    > a,
+    > div {
+        flex: 1 auto;
+        margin-bottom: 1rem;
+    }
+}
+
+#Logo {
+    font-family: $title-font;
+    background-image: url("/images/Brand-Gold-Nesur.png");
+    background-position: left center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    padding-left: 1.25em;
+    margin-left: 1rem;
+    font-size: 1.75rem;
+    text-decoration: none;
+
+    &:hover {
+        background-image: url("/images/Brand-DarkGold-Nesur.png");
+    }
+}
+
+#MenuOpener {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    display: flex;
+    cursor: pointer;
+    margin-right: 1rem;
+
+    div {
+        width: 1em;
+        max-height: 0.15em;
+        background-color: $primary;
+        flex: 1;
+        justify-content: space-between;
+        transition: 0.4s;
+    }
+
+    &:hover div {
+        background-color: $primary-dark;
+    }
+
+    &.menu-open {
+        .bar1 {
+            transform: rotate(-45deg) translate(-29%, 200%);
+        }
+
+        .bar2 {
+            opacity: 0;
+        }
+
+        .bar3 {
+            transform: rotate(45deg) translate(-30%, -200%);
+        }
+    }
+}
+
+#SiteNav {
+    flex-basis: 100%;
+    display: none;
+
+    &.menu-open {
+        display: block;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+
+        li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            &:first-child a {
+                border-top: 1px solid $primary;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            line-height: 2em;
+            font-size: 1.25rem;
+            background: #111;
+            border-bottom: 1px dotted $black;
+
+            &:hover {
+                background-color: #121212;
+            }
+        }
+    }
+}
+
+#SiteBody {
+    padding: 3.75rem 1rem 1rem 1rem;
+    flex: 1;
+    max-width: 1024px;
+    margin: 0 auto;
+    main {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header {
+        &.page-header {
+            grid-column: 1/-1;
+        }
+    }
+    article {
+        grid-column: 1/-1;
+        &.listed-article {
+            grid-column: span 1;
+            text-align: center;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            p {
+                text-align: left;
+            }
+        }
+    }
+}
+
+#SiteFooter {
+    font-size: 0.75rem;
+    text-align: right;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid $primary;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+#CookieNotice {
+    position: fixed;
+    bottom: 0;
+    background: #000;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    .cookie-wrapper {
+        max-width: 1024px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .notice-button {
+        text-align: center;
+    }
+
+    .notice-text {
+        padding-bottom: 1rem;
+    }
+}
+
+.d-none {
+    display: none !important;
+}
+
+.btn {
+    border: 1px solid;
+    border-color: $white;
+    border-radius: $border-radius-size;
+    background-color: $white;
+    color: $black;
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1rem;
+
+    &.btn-primary {
+        background-color: $primary;
+        border-color: $primary;
+
+        &:hover {
+            background-color: $primary-dark;
+            border-color: $primary-dark;
+        }
+
+        &.btn-outline {
+            color: $primary;
+
+            &:hover {
+                color: $primary-dark;
+            }
+        }
+    }
+
+    &.btn-outline,
+    &.btn-outline:hover {
+        background: none;
+    }
+
+    &.btn-full-width {
+        display: block;
+        width: 100%;
+    }
+}
+
+.alert {
+    border: 3px solid;
+    border-color: #2a2929;
+    border-radius: $border-radius-size;
+    background-color: #939393;
+    color: $black;
+    padding: 0 1rem;
+
+    &.alert-positive {
+        border-color: $positive-color;
+        background-color: $positive-background;
+
+        a {
+            color: $positive-color;
+        }
+    }
+
+    &.alert-negative {
+        border-color: $negative-color;
+        background-color: $negative-background;
+
+        a {
+            color: $negative-color;
+        }
+    }
+
+    &.alert-warning {
+        border-color: $warning-color;
+        background-color: $warning-background;
+
+        a {
+            color: $warning-color;
+        }
+    }
+
+    &.alert-info {
+        border-color: $info-color;
+        background-color: $info-background;
+
+        a {
+            color: $info-color;
+        }
+    }
+
+    a:hover {
+        color: $black;
+    }
+}
+
+.link-boxes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.link-box {
+    background: #222;
+    border-radius: $border-radius-size;
+    margin: 1rem;
+
+    > div,
+    > a {
+        padding: 1rem;
+    }
+
+    .link {
+        background: #111;
+        border-radius: 0 0 $border-radius-size $border-radius-size;
+        display: block;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            background: #151515;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #SiteBody main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .link-boxes {
+        flex-direction: row;
+    }    
+    .link-box {
+        flex: 1 0 40%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #MenuOpener {
+        display: none;
+    }
+
+    #SiteNav {
+        padding: 0 1rem 0 0;
+        display: block;
+        flex-basis: auto;
+
+        ul {
+            flex-direction: row;
+
+            li {
+                &:first-child a {
+                    border-top: none;
+                }
+
+                a {
+                    font-size: 1rem;
+                    background: none;
+                    border-bottom: none;
+                    padding: 0 1em;
+                }
+            }
+        }
+    }
+    #SiteBody main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #CookieNotice {
+        .cookie-wrapper {
+            flex-direction: row;
+        }
+
+        .notice-text {
+            padding-bottom: 0;
+            flex: 1 0 75%;
+        }
+
+        .notice-button {
+            flex: 1 0 25%;
+
+            .btn {
+                height: 100%;
+            }
+        }
+    }
+
+    .link-box {
+        flex: 1 0 30%;
+    }
+}
