@@ -14,12 +14,12 @@
     <header id="SiteHeader">
         <div id="MainNav">
             <a id="Logo" href="/">Villanite</a>
-            <input type="checkbox">
-            <!-- <div id="MenuOpener" onclick="toggleMenu(this)"> -->
+            <input id="MenuOpener" type="checkbox">
+            <div id="BarContainer" onclick="toggleMenu(this)">
                 <span class="bar1"></span>
                 <span class="bar2"></span>
                 <span class="bar3"></span>
-            <!-- </div>             -->
+            </div>
             <nav id="SiteNav" role="navigation">
             <?php wp_nav_menu(array('theme_location' => 'header-menu')); ?>               
             </nav>

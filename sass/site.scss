@@ -23,7 +23,7 @@
 
 #Logo {
     font-family: $title-font;
-    background-image: url("/images/Brand-Gold-Nesur.png");
+    background-image: url("/wp-content/themes/dist/images/Brand-Gold-Nesur.png");
     background-position: left center;
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -33,19 +33,19 @@
     text-decoration: none;
 
     &:hover {
-        background-image: url("/images/Brand-DarkGold-Nesur.png");
+        background-image: url("/wp-content/themes/dist/images/Brand-DarkGold-Nesur.png");
     }
 }
 
-#MenuOpener {
+#BarContainer {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
     display: flex;
-    cursor: pointer;
     margin-right: 1rem;
 
-    div {
+    span {
+        display: block;
         width: 1em;
         max-height: 0.15em;
         background-color: $primary;
@@ -54,34 +54,14 @@
         transition: 0.4s;
     }
 
-    &:hover div {
+    &:hover span {
         background-color: $primary-dark;
-    }
-
-    &.menu-open {
-        .bar1 {
-            transform: rotate(-45deg) translate(-29%, 200%);
-        }
-
-        .bar2 {
-            opacity: 0;
-        }
-
-        .bar3 {
-            transform: rotate(45deg) translate(-30%, -200%);
-        }
     }
 }
 
 #SiteNav {
     flex-basis: 100%;
     display: none;
-    input {
-        opacity: 50;
-    }
-    &.menu-open {
-        display: block;
-    }
 
     ul {
         padding: 0;
@@ -110,6 +90,36 @@
 
             &:hover {
                 background-color: #121212;
+            }
+        }
+    }
+}
+
+#MenuOpener {
+    cursor: pointer;
+    opacity: 0;
+    width: 2.25em;
+    height: 2.25em;
+    position: absolute;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    right: 1.1em;
+    &:checked {
+        ~ #SiteNav {
+            display: block;
+        }
+        ~ #BarContainer {
+            .bar1 {
+                transform: rotate(-45deg) translate(-29%, 200%);
+            }
+
+            .bar2 {
+                opacity: 0;
+            }
+
+            .bar3 {
+                transform: rotate(45deg) translate(-30%, -200%);
             }
         }
     }
@@ -320,7 +330,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-    #MenuOpener {
+    #BarContainer {
         display: none;
     }
 
