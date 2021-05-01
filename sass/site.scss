@@ -76,7 +76,9 @@
 #SiteNav {
     flex-basis: 100%;
     display: none;
-
+    input {
+        opacity: 50;
+    }
     &.menu-open {
         display: block;
     }
@@ -311,7 +313,7 @@
 
     .link-boxes {
         flex-direction: row;
-    }    
+    }
     .link-box {
         flex: 1 0 40%;
     }
