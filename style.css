@@ -1,0 +1,428 @@
+/*
+Theme Name: Villanite Gold
+Theme URI: http://www.villanite.com
+Author: Villanite
+Author URI: http://www.villanite.com
+Description: Just some theme that Villanite made on stream. Use it if you want.
+Version: 0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: villanite, responsive, mobile-first
+Text Domain: villanitegold
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #0b0b0b;
+    color: #e3e3e3;
+    font-family: "Roboto", "Arial", "sans-serif";
+    height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Lora", "serif";
+    margin: 1rem 0
+}
+
+h1 {
+    font-size: 2em
+}
+
+h2 {
+    font-size: 1.75em
+}
+
+h3 {
+    font-size: 1.5em
+}
+
+h4 {
+    font-size: 1.25em
+}
+
+h5 {
+    font-size: 1.2em
+}
+
+h6 {
+    font-size: 1.1em
+}
+
+a {
+    color: #ffd700;
+    transition: .2s
+}
+
+a:hover {
+    color: #d2b204
+}
+
+#MainNav {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    justify-content: space-between;
+    padding: 1rem 0 0 0;
+    border-bottom: 1px solid #ffd700;
+    box-shadow: 0 -8px 10px 5px #ffd700;
+    position: fixed;
+    width: 100%;
+    background: rgba(11, 11, 11, .99)
+}
+
+#MainNav>a, #MainNav>div {
+    flex: 1 auto;
+    margin-bottom: 1rem
+}
+
+#Logo {
+    font-family: "Lora", "serif";
+    background-image: url("/images/Brand-Gold-Nesur.png");
+    background-position: left center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    padding-left: 1.25em;
+    margin-left: 1rem;
+    font-size: 1.75rem;
+    text-decoration: none
+}
+
+#Logo:hover {
+    background-image: url("/images/Brand-DarkGold-Nesur.png")
+}
+
+#MenuOpener {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    display: flex;
+    cursor: pointer;
+    margin-right: 1rem
+}
+
+#MenuOpener div {
+    width: 1em;
+    max-height: .15em;
+    background-color: #ffd700;
+    flex: 1;
+    justify-content: space-between;
+    transition: .4s
+}
+
+#MenuOpener:hover div {
+    background-color: #d2b204
+}
+
+#MenuOpener.menu-open .bar1 {
+    transform: rotate(-45deg) translate(-29%, 200%)
+}
+
+#MenuOpener.menu-open .bar2 {
+    opacity: 0
+}
+
+#MenuOpener.menu-open .bar3 {
+    transform: rotate(45deg) translate(-30%, -200%)
+}
+
+#SiteNav {
+    flex-basis: 100%;
+    display: none
+}
+
+#SiteNav.menu-open {
+    display: block
+}
+
+#SiteNav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column
+}
+
+#SiteNav ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+#SiteNav ul li:first-child a {
+    border-top: 1px solid #ffd700
+}
+
+#SiteNav ul a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    line-height: 2em;
+    font-size: 1.25rem;
+    background: #111;
+    border-bottom: 1px dotted #0b0b0b
+}
+
+#SiteNav ul a:hover {
+    background-color: #121212
+}
+
+#SiteBody {
+    padding: 3.75rem 1rem 1rem 1rem;
+    flex: 1;
+    max-width: 1024px;
+    margin: 0 auto
+}
+
+#SiteFooter {
+    font-size: .75rem;
+    text-align: right;
+    padding: .5rem 1rem;
+    border-top: 1px solid #ffd700
+}
+
+#SiteFooter a {
+    text-decoration: none
+}
+
+#CookieNotice {
+    position: fixed;
+    bottom: 0;
+    background: #000;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box
+}
+
+#CookieNotice .cookie-wrapper {
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    flex-direction: column
+}
+
+#CookieNotice .notice-button {
+    text-align: center
+}
+
+#CookieNotice .notice-text {
+    padding-bottom: 1rem
+}
+
+.d-none {
+    display: none !important
+}
+
+.btn {
+    border: 1px solid;
+    border-color: #e3e3e3;
+    border-radius: .2rem;
+    background-color: #e3e3e3;
+    color: #0b0b0b;
+    padding: .4rem .7rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1rem
+}
+
+.btn.btn-primary {
+    background-color: #ffd700;
+    border-color: #ffd700
+}
+
+.btn.btn-primary:hover {
+    background-color: #d2b204;
+    border-color: #d2b204
+}
+
+.btn.btn-primary.btn-outline {
+    color: #ffd700
+}
+
+.btn.btn-primary.btn-outline:hover {
+    color: #d2b204
+}
+
+.btn.btn-outline, .btn.btn-outline:hover {
+    background: none
+}
+
+.btn.btn-full-width {
+    display: block;
+    width: 100%
+}
+
+.alert {
+    border: 3px solid;
+    border-color: #2a2929;
+    border-radius: .2rem;
+    background-color: #939393;
+    color: #0b0b0b;
+    padding: 0 1rem
+}
+
+.alert.alert-positive {
+    border-color: #12a912;
+    background-color: #bdd7bd
+}
+
+.alert.alert-positive a {
+    color: #12a912
+}
+
+.alert.alert-negative {
+    border-color: #a91212;
+    background-color: #d7bdbd
+}
+
+.alert.alert-negative a {
+    color: #a91212
+}
+
+.alert.alert-warning {
+    border-color: #a99812;
+    background-color: #d7d4bd
+}
+
+.alert.alert-warning a {
+    color: #a99812
+}
+
+.alert.alert-info {
+    border-color: #1272a9;
+    background-color: #bdc9d7
+}
+
+.alert.alert-info a {
+    color: #1272a9
+}
+
+.alert a:hover {
+    color: #0b0b0b
+}
+
+.link-boxes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap
+}
+
+.link-box {
+    background: #222;
+    border-radius: .2rem;
+    margin: 1rem
+}
+
+.link-box>div, .link-box>a {
+    padding: 1rem
+}
+
+.link-box .link {
+    background: #111;
+    border-radius: 0 0 .2rem .2rem;
+    display: block;
+    text-decoration: none;
+    font-weight: bold
+}
+
+.link-box .link:hover {
+    background: #151515
+}
+
+@media only screen and (min-width:768px) {
+    .link-boxes {
+        flex-direction: row
+    }
+    .link-box {
+        flex: 1 0 40%
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    #MenuOpener {
+        display: none
+    }
+    #SiteNav {
+        padding: 0 1rem 0 0;
+        display: block;
+        flex-basis: auto
+    }
+    #SiteNav ul {
+        flex-direction: row
+    }
+    #SiteNav ul li:first-child a {
+        border-top: none
+    }
+    #SiteNav ul li a {
+        font-size: 1rem;
+        background: none;
+        border-bottom: none;
+        padding: 0 1em
+    }
+    #CookieNotice .cookie-wrapper {
+        flex-direction: row
+    }
+    #CookieNotice .notice-text {
+        padding-bottom: 0;
+        flex: 1 0 75%
+    }
+    #CookieNotice .notice-button {
+        flex: 1 0 25%
+    }
+    #CookieNotice .notice-button .btn {
+        height: 100%
+    }
+    .link-box {
+        flex: 1 0 30%
+    }
+}
+
+/**********THINGS THAT NEED TO BE INCLUDED IN THE SASS***********/
+
+main {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+header.page-header {
+    grid-column: 1/-1;
+}
+
+article {
+    grid-column: 1/-1;
+}
+
+article.listed-article {
+    grid-column: span 1;
+    text-align: center
+}
+
+article.listed-article img {
+    max-width: 100%;
+    height: auto;
+}
+
+article.listed-article p {
+    text-align: left
+}
+
+@media only screen and (min-width:768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
