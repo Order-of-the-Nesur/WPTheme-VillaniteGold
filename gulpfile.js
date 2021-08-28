@@ -7,7 +7,7 @@ var cleancss = require('gulp-clean-css');
 
 gulp.task('themefiles', function (cb) {
   gulp
-    .src(['index.php','functions.php','footer.php','header.php'])
+    .src(['index.php', 'functions.php', 'footer.php', 'header.php'])
     .pipe(
       gulp.dest('./dist')
     );
@@ -43,4 +43,4 @@ gulp.task(
   })
 );
 
-gulp.task('runwpbuild', gulp.parallel('themefiles', 'images', 'sass'), function(done){done();});
+gulp.task('runwpbuild', gulp.parallel('themefiles', 'images', 'sass'), function (done) { done(); });
