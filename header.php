@@ -5,9 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php bloginfo('name'); wp_title(); ?></title>
+    <meta name="description" content="<?php echo strip_tags(get_the_excerpt()); ?>"/>
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Lora|Roboto&display=swap" as="style">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Roboto&display=swap">
-    <?php wp_head(); ?>
+    <?php wp_head(); ?>    
 </head>
 
 <body>

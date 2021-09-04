@@ -23,6 +23,11 @@ gulp.task('images', function (cb) {
   cb();
 });
 
+gulp.task('cleanfolders', function () {
+  gulp.src('./dist', {read: false})
+  .pipe(clean());    
+});
+
 gulp.task('sass', function (cb) {
   gulp
     .src('sass/site.scss')
